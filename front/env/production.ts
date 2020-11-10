@@ -1,3 +1,3 @@
 export default {
-  BASE_URL: '/nuxt-note01/'
+  BASE_URL: '/nuxt-note/'
 }
