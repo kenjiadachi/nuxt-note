@@ -17,6 +17,7 @@ jobs:
           cd front
           yarn
           yarn generate
+          touch dist/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
