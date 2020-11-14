@@ -1,3 +1,3 @@
 module.exports = {
-  BASE_URL: '/nuxt-note/'
+  BASE_URL: '/'
 }
