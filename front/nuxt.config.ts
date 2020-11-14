@@ -9,7 +9,7 @@ export default {
   router: {
     base: env.BASE_URL,
   },
-  
+
   env: env,
 
   /*
@@ -100,5 +100,15 @@ export default {
   typescript: {
     typeCheck: true,
     ignoreNotFoundWarnings: true
+  },
+
+  generate: {
+    async routes () {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('articles').only(['path']).where({ isDraft: { $eq: false } }).fetch()
+
+      return files.map(file => file.path === '/index' ? '/' : file.path)
+    }
   }
+
 }
