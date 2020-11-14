@@ -1,7 +1,7 @@
 <template lang="pug">
 v-card.mx-0(flat)
   v-layout.pt-4(justify-center)
-    v-img(src="/img/cpx.png" max-width='10rem')
+    v-img(src=`${process.env.BASE_URL}img/cpx.png` max-width='10rem')
   v-layout.py-2(justify-center)
     p.caption.text--secondary.text-center 
       | ロキソニンとカフェインから

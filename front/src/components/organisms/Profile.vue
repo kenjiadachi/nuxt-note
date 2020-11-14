@@ -2,7 +2,7 @@
 v-card(flat)
   v-row(align='center')
     v-col(cols="3")
-      v-img(src="/img/profile.png")
+      v-img(src=`${process.env.BASE_URL}/img/profile.png`)
     v-col(cols="9")
       v-card-title
         | だちけん
