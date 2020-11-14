@@ -2,7 +2,7 @@
 v-card(flat)
   v-row(align='center')
     v-col(cols="3")
-      v-img(src=`${process.env.BASE_URL}img/profile.png`)
+      v-img(:src="image")
     v-col(cols="9")
       v-card-title
         | だちけん
@@ -23,6 +23,7 @@ import TimeLineItem from '~/components/molecules/TimeLineItem.vue'
   },
 })
 export default class Profile extends Vue {
+  image = require('@/assets/img/profile.png')
   items = [
     {
       title: 'LiveDeliの開発、運用',

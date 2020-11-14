@@ -9,7 +9,7 @@ export default {
   router: {
     base: env.BASE_URL,
   },
-
+  
   env: env,
 
   /*
