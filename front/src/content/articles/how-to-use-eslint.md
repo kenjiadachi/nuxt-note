@@ -117,7 +117,7 @@ Node系だとデバックも簡単だし、eslintのエラーもすぐ表示し�
 [この記事](https://qiita.com/Mount/items/5f8196b891444575b7db)が分かりやすかったですが、VSCodeないに`ESLint`パッケージを導入したらすごく簡単にできました。
 
 
-![VSCodeの画像](img/how-to-use-eslint/1.png)
+![VSCodeの画像](articles/img/how-to-use-eslint/1.png)
 
 こんな感じで、「セミコロン抜けてるよ！」とかをすぐ教えてくれます。
 

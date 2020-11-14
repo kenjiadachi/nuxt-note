@@ -29,7 +29,7 @@ isDraft: false
 
 ログイン後に、旅行の詳細ページに飛ぶと登場する「予約する」ボタンを押すと、一意な予約コードを自動生成する必要があり、悩みました。
 
-![画面例](img/how-to-put-a-value-other-than-form-in-params/1.png)
+![画面例](articles/img/how-to-put-a-value-other-than-form-in-params/1.png)
 
 この予約コードを自動生成するために、最初送られてきたparamsからごちゃごちゃしようと思ってたのですが、どうにも難しそうでした。
 

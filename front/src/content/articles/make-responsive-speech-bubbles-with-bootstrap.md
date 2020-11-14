@@ -27,7 +27,7 @@ Bootstrap4では、.row-centerなど実装されたようなので、もっと�
 -------
 
 
-![イメージ画像](img/make-responsive-speech-bubbles-with-bootstrap/1.png)
+![イメージ画像](articles/img/make-responsive-speech-bubbles-with-bootstrap/1.png)
 
 Bootstrapを導入しているRailsアプリで、できるだけ簡単に人が話しているような吹き出しの作り方を模索したのでまとめてみました。
 
@@ -35,11 +35,11 @@ Bootstrapを導入しているRailsアプリで、できるだけ簡単に人が
 
 ## はじめに完成系を
 
-![吹き出し画像1](img/make-responsive-speech-bubbles-with-bootstrap/2.png)
+![吹き出し画像1](articles/img/make-responsive-speech-bubbles-with-bootstrap/2.png)
 
 このように、人が話しているような吹き出しの作り方をご紹介します。
 
-![吹き出し画像2](img/make-responsive-speech-bubbles-with-bootstrap/3.png)
+![吹き出し画像2](articles/img/make-responsive-speech-bubbles-with-bootstrap/3.png)
 
 画面を小さくしても、きちんとレスポンシブに変化してくれます。
 

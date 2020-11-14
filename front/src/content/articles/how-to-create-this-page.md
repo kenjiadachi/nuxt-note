@@ -324,7 +324,7 @@ git commit -m $ct
 git push
 ```
 
-![githubの設定1](img/how-to-create-this-page/1.png)
+![githubの設定1](articles/img/how-to-create-this-page/1.png)
 
 ここまでいけばもうすぐです。
 
@@ -336,11 +336,11 @@ Dockerfileをおいたディレクトリで、以下のコマンドを入力し�
 
 GitHubのページを更新してみると、以下のようになっていませんか？(docsができているはず)
 
-![githubの設定2](img/how-to-create-this-page/2.png)
+![githubの設定2](articles/img/how-to-create-this-page/2.png)
 
 こうなっていれば、Settingsに移動し、部分を選択されているものに変えてください。
 
-![githubの設定3](img/how-to-create-this-page/3.png)
+![githubの設定3](articles/img/how-to-create-this-page/3.png)
 
 すると、緑色の部分にあるURLで静的ページとして公開されているはずです。
 

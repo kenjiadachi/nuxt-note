@@ -34,13 +34,13 @@ isDraft: false
 
 ## 日報ツールとして
 
-![日報画面画像](img/notion-how-to-use/1.png)
+![日報画面画像](articles/img/notion-how-to-use/1.png)
 
 日報ツールですが、Notionのカレンダーに追加する感じでやってます。
 
 まだ`Untitled`になってますが、タイトルはその日を一言でまとめて入れるようにしています。
 
-![日報入力画面画像](img/notion-how-to-use/2.png)
+![日報入力画面画像](articles/img/notion-how-to-use/2.png)
 
 日報内容はこんな感じ。
 
@@ -50,7 +50,7 @@ isDraft: false
 
 ## メモとして
 
-![メモ画面画像](img/notion-how-to-use/3.png)
+![メモ画面画像](articles/img/notion-how-to-use/3.png)
 
 メモはふつーのリストですね。
 
@@ -60,7 +60,7 @@ isDraft: false
 
 ## 記事ストックとして
 
-![記事ストック画面画像](img/notion-how-to-use/4.png)
+![記事ストック画面画像](articles/img/notion-how-to-use/4.png)
 
 最後は記事ストックとしてですね。
 

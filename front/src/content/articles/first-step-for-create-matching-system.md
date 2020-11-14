@@ -53,7 +53,7 @@ webサービスを作ってみたい！と思った時、イメージするの�
 
 ### 掲示板方式
 
-![掲示板方式画像.png](img/first-step-for-create-matching-system/1.png)
+![掲示板方式画像.png](articles/img/first-step-for-create-matching-system/1.png)
 
 もっともシンプルなシステムとして考えると、この形になるのではないでしょうか。
 
@@ -93,7 +93,7 @@ webサービスを作ってみたい！と思った時、イメージするの�
 
 ### 注文方式
 
-![注文方式画像.png](img/first-step-for-create-matching-system/2.png)
+![注文方式画像.png](articles/img/first-step-for-create-matching-system/2.png)
 
 つぎに注文方式のシステムです。
 
@@ -140,7 +140,7 @@ AirBnB、スペースマーケット、ココナラなどがこちらの注文�
 
 ### 即時対応方式
 
-![即時対応方式画像.png](img/first-step-for-create-matching-system/3.png)
+![即時対応方式画像.png](articles/img/first-step-for-create-matching-system/3.png)
 
 最後に即時対応方式です。
 

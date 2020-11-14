@@ -47,7 +47,7 @@ webマーケに必須のwebライティング。
 
 たとえば、「七五三」というキーワードだとこのような形になりますね。
 
-![七五三の検索結果上位10個まとめ](img/how-to-create-seo-articles/1.png)
+![七五三の検索結果上位10個まとめ](articles/img/how-to-create-seo-articles/1.png)
 
 
 ---------

@@ -246,11 +246,11 @@ Rails.application.config.assets.precompile += %w( *.js *application.css)
 
 これで、こんな感じの画面ができるはずです。
 
-![Squire画面例](img/how-to-create-blog-in-rails/1.png)
+![Squire画面例](articles/img/how-to-create-blog-in-rails/1.png)
 
 indexはこんな感じ。管理者ログインをすると、横に編集、削除のボタンが出てきます。
 
-![index画面例](img/how-to-create-blog-in-rails/1.png)
+![index画面例](articles/img/how-to-create-blog-in-rails/1.png)
 
 
 コピペだけで色々やってみたのに、案外何とかなりましたね。

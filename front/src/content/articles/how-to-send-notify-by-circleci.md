@@ -39,7 +39,7 @@ CIツールで企業では一番ポピュラーに使われているのでは？
 
 > Linux、macOS、Android、Windows、さらに SaaS やファイアウォールの内側など、必要な場所で動作します。
 
-![CircleCI](img/how-to-send-notify-by-circleci/1.png)
+![CircleCI](articles/img/how-to-send-notify-by-circleci/1.png)
 
 めっちゃわかりやすい図ですね…
 

@@ -33,7 +33,7 @@ isDraft: false
 
 僕も使い始めてまだそんなに経ってないのですが、現状こんな画面で運用しています。
 
-![workona画面画像](img/workona-how-to-use/1.png)
+![workona画面画像](articles/img/workona-how-to-use/1.png)
 
 この、`default`などのワークスペースを開くと、自動で登録しているページを全部開いてくれるのが超便利です。
 

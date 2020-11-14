@@ -49,7 +49,7 @@ Railsを触っていくと、どうしてもデフォルトの機能だけでは
 
 とりあえずあるあるの図も貼っておきますね。
 
-![イメージ画像](img/how-to-use-usecase-in-rails/1.jpg)
+![イメージ画像](articles/img/how-to-use-usecase-in-rails/1.jpg)
 
 > The software in this layer contains application specific business rules. It encapsulates and implements all of the use cases of the system. These use cases orchestrate the flow of data to and from the entities, and direct those entities to use their enterprise wide business rules to achieve the goals of the use case.
 
