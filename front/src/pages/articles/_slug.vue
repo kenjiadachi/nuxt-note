@@ -8,18 +8,25 @@ v-row
 import { Component, Vue } from 'nuxt-property-decorator'
 import ArticleContent from '~/components/organisms/ArticleContent.vue'
 import RightBar from '~/components/organisms/RightBar.vue'
+import headMeta from '~/mixins/headMeta.js'
 
 @Component({
   components: {
     ArticleContent,
     RightBar,
   },
+  mixins: [headMeta],
 })
 export default class Slug extends Vue {
   [x: string]: any
   async asyncData({ $content, params, store }) {
     const RELATED_ARTICLES_COUNT = 3
     const article = await $content('articles', params.slug).fetch()
+    const meta = {
+      title: article.title,
+      description: article.description,
+      image: article.image,
+    }
     const relatedArticles = await $content('articles')
       .only(['title', 'path', 'image', 'description'])
       .sortBy('createdAt', 'desc')
@@ -36,7 +43,7 @@ export default class Slug extends Vue {
       .flat()
     const tags = [...new Set(alltags)]
     await store.dispatch('fetchTags', tags)
-    return { article, relatedArticles }
+    return { article, relatedArticles, meta }
   }
 
   get datetime() {

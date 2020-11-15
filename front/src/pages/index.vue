@@ -8,6 +8,7 @@ v-container.pt-0(fluid)
 import { Component, Vue } from 'nuxt-property-decorator'
 import Cards from '~/components/organisms/Cards.vue'
 import Pagenation from '~/components/organisms/Pagenation.vue'
+import headMeta from '~/mixins/headMeta.js'
 
 @Component({
   components: {
@@ -15,8 +16,14 @@ import Pagenation from '~/components/organisms/Pagenation.vue'
     Pagenation,
   },
   watchQuery: ['page', 'tag'],
+  mixins: [headMeta],
 })
 export default class Index extends Vue {
+  meta = {
+    title: 'HOME',
+    description: 'ロキソニンとカフェインからこれらの記事は錬成されています',
+  }
+
   async asyncData({ $content, query, store }) {
     const PER_PAGE = 24
     const PAGE = parseInt(query.page) || 1

@@ -20,12 +20,15 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - CPX',
+    title: 'CPX',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'ロキソニンとカフェインからこれらの記事は錬成されています' },
+      { hid: 'og:description', property: 'og:description', content: 'ロキソニンとカフェインからこれらの記事は錬成されています' },
+      { hid: 'og:url', property: 'og:type', content: 'https://cpx.business/' },
+      { hid: 'og:image', property: 'og:image', content: 'https://cpx.business/img/ogp.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: `${env.BASE_URL}img/favicon.ico` }
