@@ -25,7 +25,7 @@ export default class Slug extends Vue {
     const meta = {
       title: article.title,
       description: article.description,
-      image: article.image,
+      image: 'https://cpx.business/' + article.image,
     }
     const relatedArticles = await $content('articles')
       .only(['title', 'path', 'image', 'description'])
