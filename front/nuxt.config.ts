@@ -28,7 +28,8 @@ export default {
       { hid: 'description', name: 'description', content: 'ロキソニンとカフェインからこれらの記事は錬成されています' },
       { hid: 'og:description', property: 'og:description', content: 'ロキソニンとカフェインからこれらの記事は錬成されています' },
       { hid: 'og:url', property: 'og:type', content: 'https://cpx.business/' },
-      { hid: 'og:image', property: 'og:image', content: 'https://cpx.business/img/ogp.png' }
+      { hid: 'og:image', property: 'og:image', content: 'https://cpx.business/img/ogp.png' },
+      { hid: 'twitter:image', property: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: `${env.BASE_URL}img/favicon.ico` }
