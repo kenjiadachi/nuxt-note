@@ -3,7 +3,7 @@ title: '[Rails]RSpecでstubを上手に使おう'
 description: 'stubを使いこなして疎結合なコードとテストを書きましょう'
 tags: ['Rails', 'RSpec']
 image: 'img/header/how-to-use-stub-on-rspec.png'
-createdAt: '2020-08-10'
+createdAt: '2021-08-07'
 isDraft: true
 ---
 
@@ -71,10 +71,102 @@ end
 def sample
   result = FugaUsecase.new.execute
   @hoge.update!(result)
-  return hoge
+  return @hoge
 end
 ```
 
 さあ、このUsecaseのRSpecを書いてみましょう。
 
 こんな感じになるかと思います。
+
+```
+# hoge_usecase_spec.rb
+
+describe '.sample' do
+  subject { hoge_usecase.sample }
+  let(:hoge_usecase) { described_class.new }
+
+  context 'when result is success' do
+    # FugaUsecase.new.execute がうまくいくための処理
+    let(:hoge) { # 返り値として期待するhoge }
+
+    it 'returns hoge' do
+      is_expected.to eq(hoge)
+    end
+  end
+
+  context 'when result is failed' do
+    # FugaUsecase.new.execute が失敗するための処理
+
+    it 'raised Error' do
+      is_expected.to raise_error(StandardError)
+    end
+  end
+end
+
+```
+
+しかし、これは`FugaUsecase.new.execute`がうまくいくかどうかにかなり依存していることがわかります。
+
+`FugaUsecase.new.execute`の実装が変わるたびにこちらのRSpecも修正しなければならない可能性が高く、手間ですよね。
+
+また、APIを叩くようなテストが発生した時は毎回テストのたびにAPIが叩かれてしまうのはよくないですよね。
+
+こんな感じの時にスタブを使います。
+
+スタブは一部のメソッドを偽物にして、返事を指定できるものになっています。
+
+```
+# hoge_usecase_spec.rb
+
+describe '.sample' do
+  subject { hoge_usecase.sample }
+  let(:hoge_usecase) { described_class.new }
+  
+  # FugaUsecaseのインスタンスのモックと、executeメソッドを許可してresultを返却するように設定
+  let(:fuga_usecase_instance) { double('fuga_usecase_instance') }
+  before do
+    allow(FugaUsecase).to receive(:new).and_return(fuga_usecase_instance)
+    allow(fuga_usecase_instance).to receive(:execute).and_return(result)
+  end
+
+  context 'when result is success' do
+    let(:result) do
+      {
+        status_code: 200,
+        message: 'Success'
+      }
+    end
+    it 'returns hoge' do
+      is_expected.to eq(hoge)
+    end
+  end
+
+  context 'when result is failed' do
+    let(:result) do
+      {
+        status_code: 422,
+        message: 'Unprocessable Entity'
+      }
+    end
+
+    it 'raised Error' do
+      is_expected.to raise_error(StandardError)
+    end
+  end
+end
+
+```
+
+こんな感じで設定してみました。
+
+これなら、FugaUsecaseが返す値が変わらない限り、こちらのSpecは変更しなくても良くなりましたね。
+
+今日はこの辺りで。
+
+-------
+
+## 参考にした記事
+
+- [RSpec とは](https://machiiro.github.io/bootcamp/rspec/base/01_about.html)
+- [Wikipedia - スタブ](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%96)
