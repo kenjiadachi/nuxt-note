@@ -46,7 +46,7 @@ random_idx = srand(Date.today.to_time.to_i) % User.all.count
 User.all[random_idx]
 ```
 
-配列のインデックスを、Userの個数のあまりからランダムに作成する方法です。
+配列のインデックスを、非別のランダム値をUserの個数で割った数字のあまりからランダムに作成する方法です。
 
 オシャですが使い道はありません！！！
 
